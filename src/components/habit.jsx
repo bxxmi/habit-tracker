@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
 // 부모 컴포넌트로부터 전달받은 데이터를 보여주는 컴포넌트이기에
 // 자체 상태(=자체 데이터) state는 불필요하다.
-class Habit extends Component {
+class Habit extends PureComponent {
   handleIncrement = () => {
     // 각 habit의 handleIncrement가 실행이 되면 
     // props로 받은 (= 실제 조작에 관여하는) onIncrement 함수를 사용하라는 구문이다.
@@ -19,7 +19,9 @@ class Habit extends Component {
   
   render() {
     // 상위 컴포넌트인 habits에서 받아온 데이터들을 사용함.
-    const { name, count } = this.props.habit;
+    const { name } = this.props;
+    // count가 따로 들어온다.
+    const { count } = this.props;
     return (
       <li className="habit">
         <span className="habit-name">{name}</span>

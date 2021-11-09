@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+// PureComponent는 최상위에 있는 데이터가 변하지 않으면 render함수가 호출되지 않는다.
+import React, { PureComponent } from 'react';
 
-class HabitInput extends Component {
+class HabitInput extends PureComponent {
   // ref 생성
   // 바로 DOM 요소에 접근하지 않고 값을 가져올 때 등 ref를 사용한다.
   inputRef = React.createRef();

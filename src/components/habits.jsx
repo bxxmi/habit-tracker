@@ -22,6 +22,10 @@ class Habits extends Component {
                 // habit이라는 이름을 가진 props에 habit 데이터를 하나씩 담아서
                 // 하위 컴포넌트에 담아줌
                 habit = {habit}
+                name = {habit.name}
+                // 📌 PureComponent를 쓰게 되면 변경이 일어난 부분만 렌더링이 되기 때문에
+                // 실제 업데이트가 되는 count만 따로 뽑아서 전달해야한다.
+                count = {habit.count}
                 onIncrement = {this.props.onIncrement}
                 onDecrement = {this.props.onDecrement}
                 onDelete = {this.props.onDelete}

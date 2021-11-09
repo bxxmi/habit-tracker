@@ -8,7 +8,7 @@ ReactDOM.render(
   // React.StrictMode: 엄격모드
   // 배포해도 사용자 입장에서는 적용되지 않기 때문에 편하게 사용해도 된다.
   <React.StrictMode>
-    <App />
+    <App />,
   </React.StrictMode>,
   document.getElementById('root')
 );
